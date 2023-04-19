@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'reusable_card.dart';
+import 'icon_content.dart';
 
 const bottomContainerHeight = 80.0;
 const activeCardColor = Color(0xFF1D1E33);
@@ -23,54 +26,103 @@ class _InputPageState extends State<InputPage> {
           children: [
             Expanded(
               child: Row(
-                children: [
+                children: const [
                   Expanded(
-                    child: ReusableCard(color: activeCardColor),
+                    child: ReusableCard(
+                      color: activeCardColor,
+                      cardChild: IconContent(
+                        icon: FontAwesomeIcons.mars,
+                        label: 'MALE',
+                      ),
+                    ),
                   ),
                   Expanded(
-                    child: ReusableCard(color: activeCardColor),
+                    child: ReusableCard(
+                      color: activeCardColor,
+                      cardChild: IconContent(
+                        icon: FontAwesomeIcons.venus,
+                        label: 'FEMALE',
+                      ),
+                    ),
                   ),
                 ],
               ),
             ),
             Expanded(
-              child: ReusableCard(color: activeCardColor),
+              child: ReusableCard(
+                color: activeCardColor,
+                cardChild: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: const [
+                    Icon(
+                      FontAwesomeIcons.mars,
+                      size: 80.0,
+                    ),
+                    SizedBox(
+                      height: 15.0,
+                    ),
+                    Text(
+                      'MALE',
+                      style: TextStyle(color: Color(0xFF8D8E98)),
+                    )
+                  ],
+                ),
+              ),
             ),
             Expanded(
               child: Row(
                 children: [
                   Expanded(
-                    child: ReusableCard(color: activeCardColor),
+                    child: ReusableCard(
+                      color: activeCardColor,
+                      cardChild: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: const [
+                          Icon(
+                            FontAwesomeIcons.mars,
+                            size: 80.0,
+                          ),
+                          SizedBox(
+                            height: 15.0,
+                          ),
+                          Text(
+                            'MALE',
+                            style: TextStyle(color: Color(0xFF8D8E98)),
+                          )
+                        ],
+                      ),
+                    ),
                   ),
                   Expanded(
-                    child: ReusableCard(color: activeCardColor),
+                    child: ReusableCard(
+                      color: activeCardColor,
+                      cardChild: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: const [
+                          Icon(
+                            FontAwesomeIcons.mars,
+                            size: 80.0,
+                          ),
+                          SizedBox(
+                            height: 15.0,
+                          ),
+                          Text(
+                            'MALE',
+                            style: TextStyle(color: Color(0xFF8D8E98)),
+                          )
+                        ],
+                      ),
+                    ),
                   ),
                 ],
-              ),),
+              ),
+            ),
             Container(
               color: bottomContainerColor,
-              margin: EdgeInsets.only(top: 10.0),
+              margin: const EdgeInsets.only(top: 10.0),
               height: bottomContainerHeight,
             )
           ],
         ));
-  }
-}
-
-class ReusableCard extends StatelessWidget {
-
-  ReusableCard({required this.color});
-
-  final Color color;
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      margin: const EdgeInsets.all(10.0),
-      decoration: BoxDecoration(
-        color: color,
-        borderRadius: BorderRadius.circular(10.0),
-      ),
-    );
   }
 }
