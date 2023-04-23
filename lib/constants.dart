@@ -7,8 +7,9 @@ const kMaxHeight = 220.0;
 const kActiveCardColor = Color(0xFF1D1E33);
 const kInactiveCardColor = Color(0xFF111328);
 const kBottomContainerColor = Color(0xFFEB1555);
-const kSliderActiveCardColor = kBottomContainerColor;
+const kSliderActiveCardColor = Colors.white;
 const kSliderInactiveCardColor = Color(0xFF8D8E98);
+const kSliderOverlayColor = Color(0x29EB1555);
 
 const kLabelTextStyle = TextStyle(
   fontSize: 18.0,

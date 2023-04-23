@@ -94,8 +94,6 @@ class _InputPageState extends State<InputPage> {
                         value: height.toDouble(),
                         min: kMinHeight,
                         max: kMaxHeight,
-                        activeColor: kSliderActiveCardColor,
-                        inactiveColor: kSliderInactiveCardColor,
                         onChanged: (newValue) {
                           setState(() {
                             height = newValue.round();
