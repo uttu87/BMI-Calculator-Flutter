@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 import 'constants.dart';
 import 'screens/input_page.dart';
@@ -10,6 +11,10 @@ class BMICalculator extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.portraitUp,
+      DeviceOrientation.portraitDown
+    ]);
     return MaterialApp(
       theme: ThemeData.dark().copyWith(
         appBarTheme: const AppBarTheme(backgroundColor: Color(0xFF0a0e21)),
